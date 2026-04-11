@@ -143,7 +143,7 @@ python -m http.server 8080
 }
 ``` -->
 
----
+<!-- ---
 
 ## 📦 MongoDB Document Schema
 
@@ -160,7 +160,8 @@ python -m http.server 8080
     [10.9982, 76.0458],
     [10.7867, 76.6548]
   ]
-}
+} -->
+
 ```
 
 > ⚠️ `travel_time` is **NOT stored** in the database. It is computed dynamically.
