@@ -1,4 +1,4 @@
-# 🚌 BusTrack Kerala — Bus Time Tracking System
+# 🚌 BusTrack Kasaragod District— Bus Time Tracking System
 
 A full-stack bus tracking web application built with:
 - **Frontend**: HTML + CSS + Vanilla JavaScript
