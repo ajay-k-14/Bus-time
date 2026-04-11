@@ -126,7 +126,7 @@ python -m http.server 8080
 { "locations": ["Ernakulam", "Kozhikode", "Thiruvananthapuram", "Thrissur"] }
 ``` -->
 
-**GET /buses?from=Kozhikode&to=Thrissur**
+<!-- **GET /buses?from=Kozhikode&to=Thrissur**
 ```json
 {
   "buses": [
@@ -141,7 +141,7 @@ python -m http.server 8080
     }
   ]
 }
-```
+``` -->
 
 ---
 
