@@ -121,10 +121,10 @@ python -m http.server 8080
 
 ### Example responses
 
-**GET /routes**
+<!-- **GET /routes**
 ```json
 { "locations": ["Ernakulam", "Kozhikode", "Thiruvananthapuram", "Thrissur"] }
-```
+``` -->
 
 **GET /buses?from=Kozhikode&to=Thrissur**
 ```json
