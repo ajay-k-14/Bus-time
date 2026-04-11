@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BusTrack— Live Bus Timings</title>
+
+  <!-- Leaflet CSS for the map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Animated Background ─────────────────────────────────────────────── -->
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- ── Header ──────────────────────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🚌</span>
+        <span class="logo-text">Bus<em>Track</em></span>
+      </div>
+       <p class="tagline">Kasaragod District</p>
+      <p class="tagline">Real-time schedules & live timing</p>
+    </div>
+  </header>
+
+  <!-- ── Main Content ────────────────────────────────────────────────────── -->
+  <main class="main-content">
+
+    <!-- Search Panel -->
+    <section class="search-panel" aria-label="Bus search">
+      <h2 class="panel-title">Find Your Bus</h2>
+
+      <div class="search-row">
+        <!-- From -->
+        <div class="field-group">
+          <label for="from-select" class="field-label">
+            <span class="label-dot dot-green"></span> From
+          </label>
+          <div class="select-wrap">
+            <select id="from-select" class="location-select" disabled>
+              <option value="">Loading locations…</option>
+            </select>
+            <span class="select-arrow">▾</span>
+          </div>
+        </div>
+
+        <!-- Swap button -->
+        <button class="swap-btn" id="swap-btn" title="Swap locations" aria-label="Swap from and to">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4"/>
+          </svg>
+        </button>
+
+        <!-- To -->
+        <div class="field-group">
+          <label for="to-select" class="field-label">
+            <span class="label-dot dot-orange"></span> To
+          </label>
+          <div class="select-wrap">
+            <select id="to-select" class="location-select" disabled>
+              <option value="">Loading locations…</option>
+            </select>
+            <span class="select-arrow">▾</span>
+          </div>
+        </div>
+
+        <!-- Search Button -->
+        <button class="search-btn" id="search-btn" disabled>
+          Search Buses
+        </button>
+      </div>
+
+      <!-- Error message -->
+      <p class="error-msg" id="error-msg" role="alert" aria-live="polite"></p>
+    </section>
+
+    <!-- Loading Spinner -->
+    <div class="spinner-wrap" id="spinner" hidden aria-label="Loading…">
+      <div class="spinner"></div>
+      <p class="spinner-label">Fetching buses…</p>
+    </div>
+
+    <!-- Results Section -->
+    <section class="results-section" id="results-section" hidden aria-label="Search results">
+      <div class="results-header">
+        <h2 class="results-title" id="results-title">Available Buses</h2>
+        <span class="results-count" id="results-count"></span>
+      </div>
+      <div class="bus-grid" id="bus-grid">
+        <!-- Bus cards injected by JavaScript -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Map Modal ────────────────────────────────────────────────────────── -->
+  <div class="modal-overlay" id="modal-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <div class="modal-header">
+        <div>
+          <p class="modal-subtitle">Live Tracking</p>
+          <h3 class="modal-title" id="modal-title">Bus Route</h3>
+        </div>
+        <button class="modal-close" id="modal-close" aria-label="Close map">✕</button>
+      </div>
+      <div id="map" class="map-container" aria-label="Bus route map"></div>
+      <div class="map-legend">
+        <span class="legend-dot start"></span> Origin &nbsp;
+        <span class="legend-dot end"></span> Destination &nbsp;
+        <span class="legend-dot bus"></span> Bus position
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Our app logic -->
+  <script src="script.js"></script>
+</body>
+</html>
