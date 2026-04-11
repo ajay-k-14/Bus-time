@@ -168,7 +168,7 @@ python -m http.server 8080
 
 --- -->
 
-## ✅ Sample Routes Available
+<!-- ## ✅ Sample Routes Available
 
 | Bus ID | Route | Departure | Arrival | Duration |
 |--------|-------|-----------|---------|----------|
@@ -180,7 +180,7 @@ python -m http.server 8080
 | KL-06 | Kozhikode → Ernakulam | 10:00 | 14:30 | 4h 30m |
 | KL-07 | Thiruvananthapuram → Kozhikode | 21:00 | 06:30 | 9h 30m *(overnight)* |
 
----
+--- -->
 
 ## 🛠️ Troubleshooting
 
