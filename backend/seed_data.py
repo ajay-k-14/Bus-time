@@ -173,21 +173,21 @@ sample_buses = [
         ],
     },
 
-    # {
-    #     "bus_id": "KL-14",
-    #     "bus_name": "KSRTC",
-    #     "from": "Bandadka",
-    #     "to": "Kasaragod",
-    #     "departure_time": "18:30",
-    #     "arrival_time": "12:30",
-    #     "route_coordinates": [
-    #         [11.2588, 75.7804],
-    #         [11.1085, 75.9874],
-    #         [10.9982, 76.0458],
-    #         [10.8350, 76.2710],
-    #         [10.7867, 76.6548],
-    #     ],
-    # },
+    {
+        "bus_id": "KL-14",
+        "bus_name": "KSRTC",
+        "from": "Bandadka",
+        "to": "Kasaragod",
+        "departure_time": "18:30",
+        "arrival_time": "12:30",
+        "route_coordinates": [
+            [11.2588, 75.7804],
+            [11.1085, 75.9874],
+            [10.9982, 76.0458],
+            [10.8350, 76.2710],
+            [10.7867, 76.6548],
+        ],
+    },
 
     # {
     #     "bus_id": "KL-14",
