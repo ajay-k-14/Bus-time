@@ -15,57 +15,236 @@ buses_col = db["buses"]
 buses_col.drop()
 
 sample_buses = [
-    # ── Route 1: Bandadka → Kasaragod ───────────────────────────────────────
+
+    # ── Route 1: Bandadka → Kasaragod ───────────────────────────────────────    
     {
-        "bus_id": "KL-01",
-        "bus_name": "Kerala KSRTC Express",
+        "bus_id": "KL-14",
+        "bus_name": "KSRTC",
         "from": "Bandadka",
         "to": "Kasaragod",
-        "departure_time": "06:00",
-        "arrival_time": "09:30",
+        "departure_time": "05:30",
+        "arrival_time": "07:20",
         "route_coordinates": [
             [11.2588, 75.7804],   # Bandadka
             [10.9982, 76.0458],   # Palakkad approach
             [10.7867, 76.6548],   # Kasaragod
         ],
     },
+
+    # {
+    #     "bus_id": "KL-14",
+    #     "bus_name": "KSRTC",
+    #     "from": "Bandadka",
+    #     "to": "Kasaragod",
+    #     "departure_time": "06:30",
+    #     "arrival_time": "08:20",
+    #     "route_coordinates": [
+    #         [11.2588, 75.7804],   # Bandadka
+    #         [10.9982, 76.0458],   # Palakkad approach
+    #         [10.7867, 76.6548],   # Kasaragod
+    #     ],
+    # },
+
+    # {
+    #     "bus_id": "KL-14",
+    #     "bus_name": "KSRTC",
+    #     "from": "Bandadka",
+    #     "to": "Kasaragod",
+    #     "departure_time": "07:10",
+    #     "arrival_time": "09:00",
+    #     "route_coordinates": [
+    #         [11.2588, 75.7804],   # Bandadka
+    #         [10.9982, 76.0458],   # Palakkad approach
+    #         [10.7867, 76.6548],   # Kasaragod
+    #     ],
+    # },
+
+    # {
+    #     "bus_id": "KL-14",
+    #     "bus_name": "KSRTC",
+    #     "from": "Bandadka",
+    #     "to": "Kasaragod",
+    #     "departure_time": "07:45",
+    #     "arrival_time": "09:35",
+    #     "route_coordinates": [
+    #         [11.2588, 75.7804],   # Bandadka
+    #         [10.9982, 76.0458],   # Palakkad approach
+    #         [10.7867, 76.6548],   # Kasaragod
+    #     ],
+    # },
+
+    # {
+    #     "bus_id": "KL-14",
+    #     "bus_name": "KSRTC",
+    #     "from": "Bandadka",
+    #     "to": "Kasaragod",
+    #     "departure_time": "08:45",
+    #     "arrival_time": "10:35",
+    #     "route_coordinates": [
+    #         [11.2588, 75.7804],   # Bandadka
+    #         [10.9982, 76.0458],   # Palakkad approach
+    #         [10.7867, 76.6548],   # Kasaragod
+    #     ],
+    # },
+
+    # {
+    #     "bus_id": "KL-14",
+    #     "bus_name": "KSRTC",
+    #     "from": "Bandadka",
+    #     "to": "Kasaragod",
+    #     "departure_time": "10:40",
+    #     "arrival_time": "12:30",
+    #     "route_coordinates": [
+    #         [11.2588, 75.7804],
+    #         [11.1085, 75.9874],
+    #         [10.9982, 76.0458],
+    #         [10.8350, 76.2710],
+    #         [10.7867, 76.6548],
+    #     ],
+    # },
+    
+    # {
+    #     "bus_id": "KL-14",
+    #     "bus_name": "KSRTC",
+    #     "from": "Bandadka",
+    #     "to": "Kasaragod",
+    #     "departure_time": "11:00",
+    #     "arrival_time": "12:50",
+    #     "route_coordinates": [
+    #         [11.2588, 75.7804],   # Bandadka
+    #         [10.9982, 76.0458],   # Palakkad approach
+    #         [10.7867, 76.6548],   # Kasaragod
+    #     ],
+    # },
+
+    # {
+    #     "bus_id": "KL-14",
+    #     "bus_name": "KSRTC",
+    #     "from": "Bandadka",
+    #     "to": "Kasaragod",
+    #     "departure_time": "11:20",
+    #     "arrival_time": "13:10",
+    #     "route_coordinates": [
+    #         [11.2588, 75.7804],   # Bandadka
+    #         [10.9982, 76.0458],   # Palakkad approach
+    #         [10.7867, 76.6548],   # Kasaragod
+    #     ],
+    # },
+
+    # {
+    #     "bus_id": "KL-14",
+    #     "bus_name": "KSRTC",
+    #     "from": "Bandadka",
+    #     "to": "Kasaragod",
+    #     "departure_time": "16:30",
+    #     "arrival_time": "18:20",
+    #     "route_coordinates": [
+    #         [11.2588, 75.7804],   # Bandadka
+    #         [10.9982, 76.0458],   # Palakkad approach
+    #         [10.7867, 76.6548],   # Kasaragod
+    #     ],
+    # },
+
+    # {
+    #     "bus_id": "KL-14",
+    #     "bus_name": "KSRTC",
+    #     "from": "Bandadka",
+    #     "to": "Kasaragod",
+    #     "departure_time": "17:15",
+    #     "arrival_time": "19:05",
+    #     "route_coordinates": [
+    #         [11.2588, 75.7804],   # Bandadka
+    #         [10.9982, 76.0458],   # Palakkad approach
+    #         [10.7867, 76.6548],   # Kasaragod
+    #     ],
+    # },
+
+    # {
+    #     "bus_id": "KL-14",
+    #     "bus_name": "KSRTC",
+    #     "from": "Bandadka",
+    #     "to": "Kasaragod",
+    #     "departure_time": "17:40",
+    #     "arrival_time": "19:30",
+    #     "route_coordinates": [
+    #         [11.2588, 75.7804],   # Bandadka
+    #         [10.9982, 76.0458],   # Palakkad approach
+    #         [10.7867, 76.6548],   # Kasaragod
+    #     ],
+    # },
+
+    # {
+    #     "bus_id": "KL-14",
+    #     "bus_name": "KSRTC",
+    #     "from": "Bandadka",
+    #     "to": "Kasaragod",
+    #     "departure_time": "18:30",
+    #     "arrival_time": "12:30",
+    #     "route_coordinates": [
+    #         [11.2588, 75.7804],
+    #         [11.1085, 75.9874],
+    #         [10.9982, 76.0458],
+    #         [10.8350, 76.2710],
+    #         [10.7867, 76.6548],
+    #     ],
+    # },
+
+    # {
+    #     "bus_id": "KL-14",
+    #     "bus_name": "KSRTC",
+    #     "from": "Bandadka",
+    #     "to": "Kasaragod",
+    #     "departure_time": "19:00",
+    #     "arrival_time": "20:50",
+    #     "route_coordinates": [
+    #         [11.2588, 75.7804],
+    #         [11.1085, 75.9874],
+    #         [10.9982, 76.0458],
+    #         [10.8350, 76.2710],
+    #         [10.7867, 76.6548],
+    #     ],
+    # },
+
+    # {
+    #     "bus_id": "KL-14",
+    #     "bus_name": "KSRTC",
+    #     "from": "Bandadka",
+    #     "to": "Kasaragod",
+    #     "departure_time": "19:40",
+    #     "arrival_time": "21:30",
+    #     "route_coordinates": [
+    #         [11.2588, 75.7804],
+    #         [11.1085, 75.9874],
+    #         [10.9982, 76.0458],
+    #         [10.8350, 76.2710],
+    #         [10.7867, 76.6548],
+    #     ],
+    # },
+
+
+    # ── Route 2: Kasaragod → Bandadka ────────────────────────────────────────
     {
-        "bus_id": "KL-02",
-        "bus_name": "Malabar Fast Passenger",
-        "from": "Bandadka",
-        "to": "Kasaragod",
-        "departure_time": "08:45",
-        "arrival_time": "12:15",
-        "route_coordinates": [
-            [11.2588, 75.7804],
-            [11.1085, 75.9874],
-            [10.9982, 76.0458],
-            [10.8350, 76.2710],
-            [10.7867, 76.6548],
-        ],
-    },
-    # ── Route 2: Kasaragod → Kanhangad ────────────────────────────────────────
-    {
-        "bus_id": "KL-03",
-        "bus_name": "Kasaragod Kanhangad Deluxe",
+        "bus_id": "KL-14",
+        "bus_name": "KSRTC",
         "from": "Kasaragod",
-        "to": "Kanhangad",
-        "departure_time": "07:30",
-        "arrival_time": "09:00",
+        "to": "Bandadka",
+        "departure_time": "05:50",
+        "arrival_time": "07:40",
         "route_coordinates": [
             [10.7867, 76.6548],   # Kasaragod
             [10.5276, 76.2144],   # Chalakudy
-            [9.9816,  76.2999],   # Kanhangad
+            [9.9816,  76.2999],   # Bandadka
 
         ],
     },
+
     {
-        "bus_id": "KL-04",
-        "bus_name": "Chalakudy Night Rider",
+        "bus_id": "KL-14",
+        "bus_name": "KSRTC",
         "from": "Kasaragod",
-        "to": "Kanhangad",
-        "departure_time": "22:00",
-        "arrival_time": "00:30",   # Midnight crossover!
+        "to": "Bandadka",
+        "departure_time": "08:45",
+        "arrival_time": "10:35",   # Midnight crossover!
         "route_coordinates": [
             [10.7867, 76.6548],
             [10.6500, 76.4000],
@@ -74,10 +253,104 @@ sample_buses = [
             [9.9816,  76.2999],
         ],
     },
+
+    {
+        "bus_id": "KL-14",
+        "bus_name": "KSRTC",
+        "from": "Kasaragod",
+        "to": "Bandadka",
+        "departure_time": "09:10",
+        "arrival_time": "11:00",
+        "route_coordinates": [
+            [10.7867, 76.6548],   # Kasaragod
+            [10.5276, 76.2144],   # Chalakudy
+            [9.9816,  76.2999],   # Bandadka
+
+        ],
+    },
+    
+    {
+        "bus_id": "KL-14",
+        "bus_name": "KSRTC",
+        "from": "Kasaragod",
+        "to": "Bandadka",
+        "departure_time": "10:40",
+        "arrival_time": "12:30",   # Midnight crossover!
+        "route_coordinates": [
+            [10.7867, 76.6548],
+            [10.6500, 76.4000],
+            [10.5276, 76.2144],
+            [10.2000, 76.3000],
+            [9.9816,  76.2999],
+        ],
+    },
+
+    {
+        "bus_id": "KL-14",
+        "bus_name": "KSRTC",
+        "from": "Kasaragod",
+        "to": "Bandadka",
+        "departure_time": "16:00",
+        "arrival_time": "17:50",
+        "route_coordinates": [
+            [10.7867, 76.6548],   # Kasaragod
+            [10.5276, 76.2144],   # Chalakudy
+            [9.9816,  76.2999],   # Bandadka
+
+        ],
+    },
+    
+    {
+        "bus_id": "KL-14",
+        "bus_name": "KSRTC",
+        "from": "Kasaragod",
+        "to": "Bandadka",
+        "departure_time": "18:30",
+        "arrival_time": "20:20",   # Midnight crossover!
+        "route_coordinates": [
+            [10.7867, 76.6548],
+            [10.6500, 76.4000],
+            [10.5276, 76.2144],
+            [10.2000, 76.3000],
+            [9.9816,  76.2999],
+        ],
+    },
+
+    {
+        "bus_id": "KL-14",
+        "bus_name": "KSRTC",
+        "from": "Kasaragod",
+        "to": "Bandadka",
+        "departure_time": "20:00",
+        "arrival_time": "21:50",
+        "route_coordinates": [
+            [10.7867, 76.6548],   # Kasaragod
+            [10.5276, 76.2144],   # Chalakudy
+            [9.9816,  76.2999],   # Bandadka
+
+        ],
+    },
+    
+    {
+        "bus_id": "KL-14",
+        "bus_name": "KSRTC",
+        "from": "Kasaragod",
+        "to": "Bandadka",
+        "departure_time": "20:20",
+        "arrival_time": "22:10",   # Midnight crossover!
+        "route_coordinates": [
+            [10.7867, 76.6548],
+            [10.6500, 76.4000],
+            [10.5276, 76.2144],
+            [10.2000, 76.3000],
+            [9.9816,  76.2999],
+        ],
+    },
+
     # ── Route 3: Kanhangad→ Sullia ───────────────────────────────
     {
-        "bus_id": "KL-05",
-        "bus_name": "Capital Express Super Fast",
+        "bus_id": "KL-14",
+        "bus_name": "KSRTC",
         "from": "Kanhangad",
         "to": "Sullia",
         "departure_time": "05:00",
@@ -90,10 +363,12 @@ sample_buses = [
             [8.5241,  76.9366],   # Sullia
         ],
     },
+
+    
     # ── Route 4: Bandadka → Kanhangad ───────────────────────────────────────
     {
-        "bus_id": "KL-06",
-        "bus_name": "Malabar Kochi Superlink",
+        "bus_id": "KL-14",
+        "bus_name": "Akshaya",
         "from": "Bandadka",
         "to": "Kanhangad",
         "departure_time": "10:00",
@@ -107,8 +382,8 @@ sample_buses = [
     },
     # ── Route 5: Sullia→ Bandadka (long haul) ──────────────────
     {
-        "bus_id": "KL-07",
-        "bus_name": "Kerala Sampark Kranti",
+        "bus_id": "KL-14",
+        "bus_name": "Guruji",
         "from": "Sullia",
         "to": "Bandadka",
         "departure_time": "21:00",
