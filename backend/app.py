@@ -101,7 +101,7 @@ def track_bus(bus_id):
         "bus_name": bus["bus_name"],
         "from":     bus["from"],
         "to":       bus["to"],
-        "coordinates": bus.get("route_coordinates", []),
+        "coordinates": bus.get("route_coordinates", []), 
     })
 
 @app.route("/")
