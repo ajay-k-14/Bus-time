@@ -7,7 +7,7 @@ exposes API endpoints for the frontend to consume.
 Run: python app.py
 """
 
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 from pymongo import MongoClient
 from datetime import datetime
