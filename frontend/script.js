@@ -236,7 +236,7 @@ async function openTrackModal(busId, busName) {
 
     initMap(coords, busName);
   } catch (err) {
-    showError("Could not load route. Check the backend.");
+    showError("Could not load route.");
     console.error("openTrackModal error:", err);
   }
 }
