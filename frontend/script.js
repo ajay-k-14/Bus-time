@@ -10,8 +10,7 @@
 
 // ── Configuration ────────────────────────────────────────────────────────────
 // Change this if your Flask server runs on a different port or host
-
-const API_BASE = "";
+const API_BASE = "http://localhost:5000";
 
 // ── DOM References ─────────────────────────────────────────────────────────
 const fromSelect     = document.getElementById("from-select");
