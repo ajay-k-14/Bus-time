@@ -105,14 +105,6 @@ def track_bus(bus_id):
     })
 
 
-@app.route("/")
-def index():
-    return send_from_directory("../frontend", "index.html")
-
-@app.route("/<path:filename>")
-def static_files(filename):
-    return send_from_directory("../frontend", filename)
-
 # ── Dev Server ────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
