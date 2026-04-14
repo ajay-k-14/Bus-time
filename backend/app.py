@@ -7,7 +7,7 @@ exposes API endpoints for the frontend to consume.
 Run: python app.py
 """
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 from pymongo import MongoClient
 from datetime import datetime
@@ -104,6 +104,13 @@ def track_bus(bus_id):
         "coordinates": bus.get("route_coordinates", []),
     })
 
+    @app.route("/")
+def index():
+    return send_from_directory("../frontend", "index.html")
+
+@app.route("/<path:filename>")
+def static_files(filename):
+    return send_from_directory("../frontend", filename)
 
 # ── Dev Server ────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
