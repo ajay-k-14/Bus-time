@@ -104,8 +104,7 @@ def track_bus(bus_id):
         "coordinates": bus.get("route_coordinates", []),
     })
 
-    @app.route("/")
-    
+@app.route("/")
 def index():
     return send_from_directory("../frontend", "index.html")
 
