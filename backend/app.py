@@ -19,7 +19,7 @@ CORS(app)  # Allow requests from our frontend (different port)
 
 # ── MongoDB Connection ─────────────────────────────────────────────────────────
 # Change this URI if your MongoDB runs on a different host / port
-MONGO_URI = os.environ.get("MONGO_URI", "mongodb+srv://bustrack:DGlXm3Gwjcayu6ww@cluster0.attswcr.mongodb.net/?retryWrites=true&w=majority")
+MONGO_URI = os.environ.get("MONGO_URI", "mongodb://localhost:27017/")
 client = MongoClient(MONGO_URI)
 db = client["bus_tracker"]          # Database name
 buses_col = db["buses"]             # Collection name
