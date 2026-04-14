@@ -510,7 +510,7 @@ sample_buses = [
         "departure_time": "20:00",
         "arrival_time": "21:50",
         "route_coordinates": [
-                [12.50136, 75.26871], # Bandadka
+            [12.50136, 75.26871], # Bandadka
             [12.4955, 75.2550],   # Padupp
             [12.4850, 75.2400],   # Kuttikol
             [12.4800, 75.2300],   # Karadka
